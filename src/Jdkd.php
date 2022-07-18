@@ -1,5 +1,5 @@
 <?php
-namespace Jdkd;
+namespace Mylarge\Jdkd;
 
 class Jdkd
 {
