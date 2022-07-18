@@ -11,11 +11,11 @@ class Jdkd
     public $domain = '010K10019';
     public $version = "2.0";//API协议版本，固定值：2.0
     public function __construct($app_key,$app_secret,$access_token,$base_url,$domain){
-        $this->app_key = $app_key;
-        $this->app_secret = $app_secret;
-        $this->access_token = $access_token;
-        $this->base_url = $base_url;
-        $this->domain = $domain;
+        $this->app_key = $app_key??$this->app_key;
+        $this->app_secret = $app_secret??$this->app_secret;
+        $this->access_token = $access_token??$this->access_token;
+        $this->base_url = $base_url??$this->base_url;
+        $this->domain = $domain??$this->domain;
     }
     //验签
     public function generate_sign($method, $timestamp, $param_json)
